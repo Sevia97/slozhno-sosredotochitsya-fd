@@ -39,4 +39,9 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
 }
