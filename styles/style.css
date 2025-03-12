@@ -9,15 +9,15 @@ body {
 }
 
 .page {
-  overflow-x: hidden;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: 'IBM Plex mono', monospace;
-  
+  background-color: var(--menu-color);
 }
 
 .header {
   display: grid;
   grid-template-columns: 100%;
+  grid-template-rows: 1fr min-content 1fr;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -27,7 +27,6 @@ body {
 
 .decorated-zone {
   position: relative;
-  min-block-size: 97vh;
 }
 
 .decorated-zone::before {
@@ -61,7 +60,7 @@ body {
   color: var(--content-title-color);
   font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 1.3em;
   text-transform: uppercase;
 }
 
@@ -77,7 +76,7 @@ body {
 
 .header__theme-menu {
   justify-self: end;
-  margin-block-start: 40px;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -91,7 +90,7 @@ body {
   color: var(--button-color);
   font-weight: 400;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1em;
 }
 
 .header__theme-menu-button {
@@ -115,7 +114,6 @@ body {
 }
 
 .header__title {
-  margin-block-start: 15px;
   color: var(--title-color);
   font-weight: 700;
   font-size: var(--header-title-size-s);
@@ -127,10 +125,9 @@ body {
   display: grid;
   gap: 0px;
   align-self: center;
-  margin-block-end: 30px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
   color: var(--text-color-list);
 }
 
@@ -159,7 +156,7 @@ body {
   color: var(--content-title-color);
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
 }
 
 .content__list {
@@ -167,23 +164,24 @@ body {
   gap: 20px;
 }
 
-.content__list-item {
+
+.content__card {
   display: grid;
   gap: 10px;
 }
 
-.content__list-item_title {
+.card__title {
   color: var(--text-color-list);
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
 }
 
-.content__list-item_description {
+.card__description {
   color: var(--description-color);
   font-weight: 400;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
 }
 
 .description-link {
@@ -192,7 +190,7 @@ body {
 }
 
 .description-link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .description-link:focus-visible {
@@ -203,10 +201,10 @@ body {
   color: var(--text-color-list);
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
 }
 
-.content__grid-position {
+.content__position {
   display: flex;
   flex-direction: column;
   gap: 18px;

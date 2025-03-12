@@ -4,11 +4,6 @@
     padding: 20px;
   }
 
-  .decorate {
-    top: 20px;
-    right: 30px;
-  }
-
   .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
@@ -18,22 +13,19 @@
     inset-inline-start: 20px;
     inset-block-end: 20px;
   }
-  .header__theme-menu {
-    margin-block-start: 172px;
+
+  .decorate {
+    top: 20px;
+    right: 30px;
   }
 
   .header__title {
-    align-self: end;
     margin-inline-start: -20px;
-    margin-block-start: 180px;
   }
 
   .header__description {
-    margin-block-start: 160px;
-    margin-block-end: 183px;
     justify-self: end;
     inline-size: 364px;
-    block-size: 117px;
   }
 
   .menu {
@@ -42,27 +34,24 @@
     padding: 60px 20px;
   }
 
-  .content:not(:nth-of-type(2)):not(:nth-of-type(4)) {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .content__title.text-alignment {
-    block-size: 70px;
-    inline-size: 236px;
-  }
-
-  .content__grid-position {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .content:last-of-type {
     gap: 20px;
   }
 
+  .content.section-question,
+  .content.section-answer {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content__title.text-alignment {
+    inline-size: 236px;
+  }
+
+  .content__position {
+    gap: 20px;
+  }
+
   .content__picture-conteiner {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     grid-template-areas:
@@ -94,13 +83,12 @@
 
 @media (width >=1024px) {
   .header {
-    grid-template-rows: min-content;
     max-height: 768px;
   }
 
   .header__theme-menu {
     justify-self: center;
-    margin-block-start: 0px;
+    align-self: start;
   }
 
   .header__theme-menu-list {
@@ -110,39 +98,32 @@
 
   .header__title {
     font-size: var(--header-title-size-l);
-    margin-block-start: 66px;
   }
 
   .header__description {
+    margin-block-start: 15px;
     inline-size: 491px;
-    block-size: 71px;
-    margin-block-end: 0px;
-    margin-block-start: 13px;
   }
 
 
-  .content:not(:nth-of-type(2)):not(:nth-of-type(4)) {
+  .content.section-question,
+  .content.section-answer {
     gap: 10px;
   }
 
   .content__title.text-alignment {
-    block-size: 47px;
     inline-size: 315px;
   }
 
-  .content:nth-of-type(2) .content__list {
+  .content.section-reason .content__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .content:nth-of-type(2) .content__list-item {
+  .content.section-reason .content__list-item {
     align-self: flex-start;
   }
   
-  .content:nth-of-type(2) .content__list-item_title {
-    max-height: 23px;
-  }
-
   .footer__title {
     font-size: var(--header-title-size-l);
     text-shadow: 2px 2px 0 #FF0070;
