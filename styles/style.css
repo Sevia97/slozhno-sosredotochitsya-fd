@@ -1,14 +1,18 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-.page {
-  overflow-x: hidden;
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: 'IBM Plex mono', monospace;
+body {
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.page {
+  overflow-x: hidden;
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: 'IBM Plex mono', monospace;
+  
 }
 
 .header {
@@ -103,11 +107,11 @@
   outline: 1px solid var(--border-hover);
 }
 
+
 .header__theme-menu-button:focus-visible {
   border: none;
   border-bottom: 1px solid var(--border-color);
   outline: none;
-
 }
 
 .header__title {
