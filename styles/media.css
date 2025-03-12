@@ -1,0 +1,150 @@
+@media (width >=768px) {
+  .header {
+    max-height: 1024px;
+    padding: 20px;
+  }
+
+  .decorate {
+    top: 20px;
+    right: 30px;
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+  
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+  .header__theme-menu {
+    margin-block-start: 172px;
+  }
+
+  .header__title {
+    align-self: end;
+    margin-inline-start: -20px;
+    margin-block-start: 180px;
+  }
+
+  .header__description {
+    margin-block-start: 160px;
+    margin-block-end: 183px;
+    justify-self: end;
+    inline-size: 364px;
+    block-size: 117px;
+  }
+
+  .menu {
+    grid-template-columns: minmax(100%, 768px);
+    gap: 80px;
+    padding: 60px 20px;
+  }
+
+  .content:not(:nth-of-type(2)):not(:nth-of-type(4)) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content__title.text-alignment {
+    block-size: 70px;
+    inline-size: 236px;
+  }
+
+  .content__grid-position {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content:last-of-type {
+    gap: 20px;
+  }
+
+  .content__picture-conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+    "sunset sunset icecream"
+    "tape books icecream"
+    "tape street street";
+  }
+
+  .picture-sunset {
+    grid-area: sunset;
+  }
+  
+  .picture-icecream{
+    grid-area: icecream;
+  }
+
+  .picture-tape {
+    grid-area: tape;
+  }
+
+  .picture-books {
+    grid-area: books;
+  }
+
+  .picture-street {
+    grid-area: street;
+  }
+}
+
+@media (width >=1024px) {
+  .header {
+    grid-template-rows: min-content;
+    max-height: 768px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    margin-block-start: 0px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header__title {
+    font-size: var(--header-title-size-l);
+    margin-block-start: 66px;
+  }
+
+  .header__description {
+    inline-size: 491px;
+    block-size: 71px;
+    margin-block-end: 0px;
+    margin-block-start: 13px;
+  }
+
+
+  .content:not(:nth-of-type(2)):not(:nth-of-type(4)) {
+    gap: 10px;
+  }
+
+  .content__title.text-alignment {
+    block-size: 47px;
+    inline-size: 315px;
+  }
+
+  .content:nth-of-type(2) .content__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content:nth-of-type(2) .content__list-item {
+    align-self: flex-start;
+  }
+  
+  .content:nth-of-type(2) .content__list-item_title {
+    max-height: 23px;
+  }
+
+  .footer__title {
+    font-size: var(--header-title-size-l);
+    text-shadow: 2px 2px 0 #FF0070;
+  }
+}
